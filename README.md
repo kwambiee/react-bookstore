@@ -4,7 +4,7 @@
 
 > The Bookstore is created using react and redux. It allows you to:
 
-    - Display a list of books.
+    - Display list of books.
     - Add a book.
     - Remove a selected book.
 
@@ -15,7 +15,7 @@
 - JavaScript (ES6)
 - CSS
 
-## Live Demo
+## Live Demo(Not available yet)
 
 [Live Link]
 
