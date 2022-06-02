@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import AddBook from './addBook';
 import Book from './Book';
+import Addbook from './Addbook';
 
 function Books() {
   const [book, setBook] = useState({
@@ -11,7 +11,7 @@ function Books() {
   return (
     <div>
       <Book bookProps={book} />
-      <AddBook />
+      <Addbook />
     </div>
   );
 }
