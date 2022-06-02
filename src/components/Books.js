@@ -8,10 +8,14 @@ function Books() {
     author: 'Gretchen Saffles',
   });
 
+  const addBooks = (book) => {
+    setBook({ ...book, ...book });
+  };
+
   return (
     <div>
       <Book bookProps={book} />
-      <Addbook />
+      <Addbook addBookProps={addBooks} />
     </div>
   );
 }

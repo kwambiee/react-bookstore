@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Addbook() {
   return (
@@ -7,7 +7,9 @@ function Addbook() {
       <form className="form">
         <input className="formTitle" type="text" placeholder="Book Title" />
         <input className="formAuthor" type="text" placeholder="Author" />
-        <button className="input-submit">Add book</button>
+        <button type="button" className="input-submit">
+          Add book
+        </button>
       </form>
     </div>
   );

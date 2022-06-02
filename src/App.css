@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Courier New', Courier, monospace;
 }
+
 .navLinks {
   display: flex;
 }
@@ -12,6 +14,7 @@ body {
   list-style: none;
   margin: 0.5rem 1rem;
 }
+
 .navLink {
   text-decoration: none;
   font-weight: bolder;
@@ -21,21 +24,26 @@ body {
 .navLink:hover {
   text-decoration: underline;
 }
+
 .bookList {
   list-style: none;
 }
+
 .bookContainer {
   margin: 1rem auto;
   border: 1px solid black;
   padding: 2rem;
   width: 80%;
 }
+
 .bookContainer span {
   margin: 0.8rem;
 }
+
 .delete {
   float: right;
 }
+
 .formContainer {
   margin-left: 8%;
   height: 100vh;
@@ -43,10 +51,12 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
 .addBook {
   color: gray;
   font-weight: bolder;
 }
+
 .formTitle {
   padding-right: 22%;
   padding-top: 0.5rem;
@@ -55,6 +65,7 @@ body {
   border-radius: 2px;
   border: 2px solid silver;
 }
+
 .formAuthor {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -62,6 +73,7 @@ body {
   border-radius: 2px;
   border: 2px solid silver;
 }
+
 .input-submit {
   padding: 0.5rem 1.5rem;
   color: #fff;
@@ -69,9 +81,11 @@ body {
   border: none;
   border-radius: 5px;
 }
+
 .category {
   display: flex;
 }
+
 .status {
   width: 100px;
   padding: 0.8rem;
