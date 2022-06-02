@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+.navLinks {
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navLinks li {
+  list-style: none;
+  margin: 0.5rem 1rem;
+}
+.navLink {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navLink:hover {
+  text-decoration: underline;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bookList {
+  list-style: none;
+}
+.bookContainer {
+  margin: 1rem auto;
+  border: 1px solid black;
+  padding: 2rem;
+  width: 80%;
+}
+.bookContainer span {
+  margin: 0.8rem;
+}
+.delete {
+  float: right;
+}
+.formContainer {
+  margin-left: 8%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.addBook {
+  color: gray;
+  font-weight: bolder;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formTitle {
+  padding-right: 22%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 2px;
+  border: 2px solid silver;
+}
+.formAuthor {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 2px;
+  border: 2px solid silver;
+}
+.input-submit {
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  background-color: rgb(29, 124, 231);
+  border: none;
+  border-radius: 5px;
+}
+.category {
+  display: flex;
+}
+.status {
+  width: 100px;
+  padding: 0.8rem;
+  margin: 1rem auto;
 }
