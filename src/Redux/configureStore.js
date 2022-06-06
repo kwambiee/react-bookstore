@@ -3,8 +3,8 @@ import bookReducer from './books/books';
 import statusReducer from './categories/categories';
 
 const rootReducer = Redux.combineReducers({
-    read:bookReducer,
-    stat:statusReducer
+    bookReducer,
+    statusReducer
 })
 
 const store = Redux.createStore(rootReducer)
