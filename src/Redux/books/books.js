@@ -21,10 +21,10 @@ const bookReducer = (state=initialState, action) => {
         case 'Book_Deleted':
             return 
             state.filter((book)=>{
-                return book.id !=id
+                return book.id ! = id
             })        
     }
-    return state
+    return state;
 }
 
 export {addBook,deleteBook}
