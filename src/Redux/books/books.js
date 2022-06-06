@@ -16,7 +16,7 @@ export const deleteBook = ()=>{
     }
 }
 
-const bookReducer = (state=[], action) => {
+export default function bookReducer(state=[], action) {
     switch(action.type){
         case BOOK_ADDED:
             return [...state,{
@@ -33,5 +33,5 @@ const bookReducer = (state=[], action) => {
 }
 
 
-export default bookReducer;
+
 
