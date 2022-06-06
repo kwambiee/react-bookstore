@@ -1,20 +1,20 @@
-import React from "react"
+const STATUS_CHECKED ='./react-bookstore/bookreducer/STATUS_CHECKED'
 
-const initialState = []
-const checkStatus = ()=>{
+
+export const checkStatus = ()=>{
     return {
-        type:'Status_Checked'
+        type:STATUS_CHECKED
     }
 }
 
-const statusReducer = (state=initialState, action) => {
+const statusReducer = (state=[], action) => {
     switch(action.type){
-        case 'Status_Checked':
-            return "Under Construction"   
+        case STATUS_CHECKED:
+            return "Under Construction" 
+        default:
+            return state  
     }
-    return state;
 }
 
-export {checkStatus}
 export default statusReducer;
 

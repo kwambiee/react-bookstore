@@ -1,38 +1,37 @@
+const BOOK_ADDED = './react-bookstore/bookreducer/BOOK_ADDED'
+const BOOK_DELETED = './react-bookstore/bookreducer/BOOK_DELETED'
 
-
-const initialState = []
-
-const addBook = ()=>{
+export const bookAdded = ()=>{
     return {
-        type:'Book_Added',
+        type:BOOK_ADDED,
         title,
         author
     }
 }
 
-const deleteBook = (id)=>{
+export const deleteBook = ()=>{
     return{
-        type:'Book_Deleted',
-        id
+        type:BOOK_DELETED,
+        id:null
     }
 }
 
-const bookReducer = (state=initialState, action) => {
+const bookReducer = (state=[], action) => {
     switch(action.type){
-        case 'Book_Added':
+        case BOOK_ADDED:
             return [...state,{
                 title:action.title,
                 author:action.author
             }]
-        case 'Book_Deleted':
-            return 
-            state.filter((book)=>{
-                return book.id != id
-            })        
+        case BOOK_DELETED:
+            return state.filter((action)=>{
+                return action.id != id
+            }) 
+        default:
+            return state       
     }
-    return state;
 }
 
-export {addBook,deleteBook}
+
 export default bookReducer;
 
