@@ -1,4 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
 const STATUS_CHECKED = './react-bookstore/bookreducer/STATUS_CHECKED';
 
 export const checkStatus = () => ({

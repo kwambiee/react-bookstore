@@ -1,4 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
 const BOOK_ADDED = './react-bookstore/bookreducer/BOOK_ADDED';
 const BOOK_DELETED = './react-bookstore/bookreducer/BOOK_DELETED';
 
