@@ -1,14 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-function Book(props) {
-  
+function Book() {
   return (
     <li className="bookList">
       <div className="bookContainer">
-        <span>
-          
-        </span>
+        <span />
         <button type="button" className="delete">
           Delete
         </button>
