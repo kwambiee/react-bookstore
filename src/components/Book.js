@@ -1,28 +1,34 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteBook } from '../Redux/books/books';
 
 function Book() {
-	const showBook = useSelector((state) => state);
+	const showBook = useSelector((state) => state.books);
 	const dispatch = useDispatch();
+
+	const deleteHandler = (id) => {
+		dispatch(deleteBook(id));
+	};
+
 	return (
 		<li className='bookList'>
 			<div className='bookContainer'>
 				<span>
-					{showBook.map((book) => (
-						<span>{book}</span>
+					{showBook.map((book, i) => (
+						<div key={i} className='eachbook'>
+							{book.title} : {book.author}
+							<button
+								type='button'
+								className='delete'
+								onClick={() => {
+									deleteHandler(book.id);
+								}}
+							>
+								Delete
+							</button>
+						</div>
 					))}
 				</span>
-				<button
-					type='button'
-					className='delete'
-					onClick={() => {
-						dispatch(deleteBook(id));
-					}}
-				>
-					Delete
-				</button>
 			</div>
 		</li>
 	);

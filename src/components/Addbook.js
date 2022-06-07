@@ -3,36 +3,39 @@ import { useDispatch } from 'react-redux';
 import { bookAdded } from '../Redux/books/books';
 
 const Addbook = () => {
-	const [reads, setReads] = useState({ title: '', author: '' });
-	const bookAdded = (e) => {
-		setReads({
-			[e.target.name]: e.target.value,
-		});
-		useDispatch(bookAdded(book));
-	};
+	const [title, setTitle] = useState('');
+	const [author, setAuthor] = useState('');
+	const dispatch = useDispatch();
 
-	<div className='formContainer'>
-		<span className='addBook'>ADD NEW BOOK</span>
-		<form className='form' onSubmit={bookAdded}>
-			<input
-				className='formTitle'
-				type='text'
-				name='title'
-				placeholder='Book Title'
-				value={reads.value}
-			/>
-			<input
-				className='formAuthor'
-				type='text'
-				name='author'
-				placeholder='Author'
-				value={reads.value}
-			/>
-			<button type='button' className='input-submit'>
-				Add book
-			</button>
-		</form>
-	</div>;
+	const handleSubmit = () => {
+		dispatch(bookAdded({ title, author }));
+		setTitle('');
+		setAuthor('');
+	};
+	return (
+		<div className='formContainer'>
+			<span className='addBook'>ADD NEW BOOK</span>
+			<form className='form'>
+				<input
+					className='formTitle'
+					type='text'
+					name='title'
+					placeholder='Book Title'
+					onChange={(e) => setTitle(e.target.value)}
+				/>
+				<input
+					className='formAuthor'
+					type='text'
+					name='author'
+					placeholder='Author'
+					onChange={(e) => setAuthor(e.target.value)}
+				/>
+				<button type='button' className='input-submit' onClick={handleSubmit}>
+					Add book
+				</button>
+			</form>
+		</div>
+	);
 };
 
 export default Addbook;
