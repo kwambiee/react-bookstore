@@ -1,14 +1,15 @@
 const STATUS_CHECKED = './react-bookstore/bookreducer/STATUS_CHECKED';
 
 export const checkStatus = () => ({
-  type: STATUS_CHECKED,
+	type: STATUS_CHECKED,
 });
 
-export default function statusReducer(state = [], action) {
-  switch (action.type) {
-    case STATUS_CHECKED:
-      return 'Under Construction';
-    default:
-      return state;
-  }
+const initialState = 'Under Construction';
+export default function statusReducer(state = initialState, action) {
+	switch (action.type) {
+		case STATUS_CHECKED:
+			return state;
+		default:
+			return state;
+	}
 }

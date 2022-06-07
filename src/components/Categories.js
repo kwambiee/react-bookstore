@@ -1,11 +1,14 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { checkStatus } from '../Redux/categories/categories';
 
 function Categories() {
+	const statCheck = useSelector((state) => state.categories);
+	console.log(statCheck);
 	const dispatch = useDispatch();
 	return (
 		<div className='category'>
+			<div>{statCheck}</div>
 			<button
 				className='status'
 				type='submit'

@@ -5,7 +5,7 @@ import statusReducer from './categories/categories';
 
 const rootReducer = combineReducers({
 	books: bookReducer,
-	categorie: statusReducer,
+	categories: statusReducer,
 });
 
 const store = configureStore({ reducer: rootReducer });
