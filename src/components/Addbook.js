@@ -8,7 +8,7 @@ const Addbook = () => {
 		setReads({
 			[e.target.name]: e.target.value,
 		});
-		useDispatch(bookAdded());
+		useDispatch(bookAdded(book));
 	};
 
 	<div className='formContainer'>
