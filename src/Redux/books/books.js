@@ -11,7 +11,10 @@ export const deleteBook = (id) => ({
   payload: id,
 });
 
-export default function bookReducer(state = [], action) {
+export default function bookReducer(
+  state = [{ title: 'Daughter You Can Make it', author: 'Hogward Mills' }],
+  action,
+) {
   switch (action.type) {
     case BOOK_ADDED:
       return [...state, action.payload];
