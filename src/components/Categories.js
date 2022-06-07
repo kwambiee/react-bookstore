@@ -1,13 +1,22 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { checkStatus } from '../Redux/categories/categories';
 
 function Categories() {
-  return (
-    <div className="category">
-      <button className="status" type="submit">
-        Check Status
-      </button>
-    </div>
-  );
+	const dispatch = useDispatch();
+	return (
+		<div className='category'>
+			<button
+				className='status'
+				type='submit'
+				onClick={() => {
+					dispatch(checkStatus());
+				}}
+			>
+				Check Status
+			</button>
+		</div>
+	);
 }
 
 export default Categories;
