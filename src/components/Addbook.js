@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { bookAdded } from '../Redux/books/books';
 
 const Addbook = () => {
 	const [reads, setReads] = useState({ title: '', author: '' });
@@ -7,6 +8,7 @@ const Addbook = () => {
 		setReads({
 			[e.target.name]: e.target.value,
 		});
+		useDispatch(bookAdded());
 	};
 
 	<div className='formContainer'>
