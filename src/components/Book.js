@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteBook } from '../Redux/books/books';
+import { fetchBooks } from '../Redux/books/books';
 
 function Book() {
 	const showBook = useSelector((state) => state.books);
-	console.log(showBook);
 	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(fetchBooks());
+	}, []);
 
 	const deleteHandler = (id) => {
 		dispatch(deleteBook(id));
