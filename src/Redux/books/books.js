@@ -23,10 +23,15 @@ export const postBook = (book) => {
 	};
 };
 
-// const fetchBooks = () => {
-//   return async(dispatch) =>{
-//     await fetch (`${baseUrl}/apps/${apiKey}/books`)
-//   }
+const fetchBooks = () => {
+	return async (dispatch) => {
+		await fetch(`${baseUrl}/apps/${apiKey}/books`)
+			.then((response) => response.data)
+			.then((response) => {
+				dispatch({ type: BOOK_ADDED, payload: response.data });
+			});
+	};
+};
 
 export const bookAdded = (book) => ({
 	type: BOOK_ADDED,
