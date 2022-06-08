@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 // import { bookAdded } from '../Redux/books/books';
 import { postBook } from '../Redux/books/books';
+import uuid from 'react-uuid';
 
 const Addbook = () => {
 	const initialBookState = {
-		item_id: 1,
+		item_id: '',
 		title: '',
 		author: '',
 		category: 'Favorites',
@@ -21,14 +22,8 @@ const Addbook = () => {
 
 	const handleSubmit = () => {
 		const { title, author } = bookState;
-		dispatch(postBook({ title, author })).then((data) => {
-			setBookState({
-				item_id: data.id,
-				title: data.title,
-				author: data.author,
-				category: data.category,
-			});
-		});
+		const book = { ...bookState, item_id: uuid() };
+		dispatch(postBook(book));
 		setBookState('');
 	};
 	return (

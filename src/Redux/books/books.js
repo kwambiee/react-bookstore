@@ -1,5 +1,9 @@
+import axios from 'axios';
+
 const BOOK_ADDED = './react-bookstore/bookreducer/BOOK_ADDED';
 const BOOK_DELETED = './react-bookstore/bookreducer/BOOK_DELETED';
+const POST_BOOK = './react-bookstore/bookreducer/POST_BOOK';
+const GET_BOOK = './react-bookstore/bookreducer/GET_BOOK';
 
 const baseUrl =
 	'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
@@ -9,26 +13,22 @@ const initialState = [];
 
 export const postBook = (book) => {
 	return async (dispatch) => {
-		await fetch(`${baseUrl}/apps/${apiKey}/books`, {
-			method: 'POST',
-			body: JSON.stringify(book),
-			headers: {
-				'Content-type': 'application/json; charset=UTF-8',
-			},
-		})
-			.then((response) => response.data)
-			.then((response) => {
-				dispatch({ type: BOOK_ADDED, payload: response.data });
+		await axios
+			.post(`${baseUrl}/apps/${apiKey}/books`, book)
+			.then((res) => res.data)
+			.then((res) => {
+				dispatch(bookPosted(res.data));
 			});
 	};
 };
 
 export const fetchBooks = () => {
 	return async (dispatch) => {
-		await fetch(`${baseUrl}/apps/${apiKey}/books`)
-			.then((response) => response.data)
+		await axios
+			.get(`${baseUrl}/apps/${apiKey}/books`)
+			.then((response) => console.log(response.data))
 			.then((response) => {
-				dispatch({ type: BOOK_ADDED, payload: response.data });
+				dispatch(retrieveBook(response.data));
 			});
 	};
 };
@@ -38,7 +38,7 @@ export const deleteBooks = (id) => {
 		await fetch(`${baseUrl}/apps/${apiKey}/books/${id}`)
 			.then((response) => response.data)
 			.then((response) => {
-				dispatch({ type: BOOK_DELETED, payload: response.data });
+				dispatch();
 			});
 	};
 };
@@ -52,6 +52,14 @@ export const deleteBook = (id) => ({
 	type: BOOK_DELETED,
 	id,
 });
+
+const bookPosted = () => {
+	type: BOOK_POSTED;
+};
+
+const retrieveBook = () => {
+	type: BOOK_RETRIEVED;
+};
 
 export default function bookReducer(state = initialState, action) {
 	switch (action.type) {
