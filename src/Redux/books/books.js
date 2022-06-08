@@ -23,12 +23,22 @@ export const postBook = (book) => {
 	};
 };
 
-const fetchBooks = () => {
+export const fetchBooks = () => {
 	return async (dispatch) => {
 		await fetch(`${baseUrl}/apps/${apiKey}/books`)
 			.then((response) => response.data)
 			.then((response) => {
 				dispatch({ type: BOOK_ADDED, payload: response.data });
+			});
+	};
+};
+
+export const deleteBooks = (id) => {
+	return async (dispatch) => {
+		await fetch(`${baseUrl}/apps/${apiKey}/books/${id}`)
+			.then((response) => response.data)
+			.then((response) => {
+				dispatch({ type: BOOK_DELETED, payload: response.data });
 			});
 	};
 };
