@@ -91,3 +91,9 @@ body {
   padding: 0.8rem;
   margin: 1rem auto;
 }
+
+.eachbook {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
