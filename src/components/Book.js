@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteBook } from '../Redux/books/books';
 import { fetchBooks } from '../Redux/books/books';
+import { BookDeleted } from '../Redux/books/books';
 
 function Book() {
 	const showBook = useSelector((state) => state.books);
@@ -12,7 +12,7 @@ function Book() {
 	}, []);
 
 	const deleteHandler = (id) => {
-		dispatch(deleteBook(id));
+		dispatch(BookDeleted(id));
 	};
 
 	return (

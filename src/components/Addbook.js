@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { bookAdded } from '../Redux/books/books';
 import { postBook } from '../Redux/books/books';
 import uuid from 'react-uuid';
 
@@ -23,7 +22,7 @@ const Addbook = () => {
 	const handleSubmit = () => {
 		const book = { ...bookState, item_id: uuid() };
 		dispatch(postBook(book));
-		setBookState('');
+		setBookState(initialBookState);
 	};
 	return (
 		<div className='formContainer'>
@@ -33,6 +32,7 @@ const Addbook = () => {
 					className='formTitle'
 					type='text'
 					name='title'
+					value={bookState.title}
 					placeholder='Book Title'
 					onChange={handleOnChange}
 				/>
@@ -40,6 +40,7 @@ const Addbook = () => {
 					className='formAuthor'
 					type='text'
 					name='author'
+					value={bookState.author}
 					placeholder='Author'
 					onChange={handleOnChange}
 				/>
