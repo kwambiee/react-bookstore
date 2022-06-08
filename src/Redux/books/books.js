@@ -13,7 +13,7 @@ const apiKey = '2esARPzzJhTQnTpX7VBI';
 const initialState = [];
 
 export const postBook = (book) => {
-	return async (dispatch) => {
+	return async () => {
 		await axios.post(`${baseUrl}/apps/${apiKey}/books`, book);
 	};
 };
@@ -26,16 +26,6 @@ export const fetchBooks = () => {
 		);
 	};
 };
-
-// export const deleteBooks = (id) => {
-// 	return async (dispatch) => {
-// 		await fetch(`${baseUrl}/apps/${apiKey}/books/${id}`)
-// 			.then((response) => response.data)
-// 			.then((response) => {
-// 				dispatch();
-// 			});
-// 	};
-// };
 
 export const bookAdded = (books) => ({
 	type: BOOK_ADDED,
@@ -61,15 +51,5 @@ export default function bookReducer(state = initialState, action) {
 			return state.filter((book) => book.id !== action.id);
 		default:
 			return state;
-	}
-}
-
-const fetchState = [];
-export function postReducer(state = fetchState, action) {
-	switch (action.type) {
-		case BOOK_POSTED:
-			return state;
-		case BOOK_RETRIEVED:
-			return [...state, ...action.payload];
 	}
 }

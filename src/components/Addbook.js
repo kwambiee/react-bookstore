@@ -21,7 +21,6 @@ const Addbook = () => {
 	};
 
 	const handleSubmit = () => {
-		const { title, author } = bookState;
 		const book = { ...bookState, item_id: uuid() };
 		dispatch(postBook(book));
 		setBookState('');
