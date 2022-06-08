@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchBooks } from '../Redux/books/books';
-import { BookDeleted } from '../Redux/books/books';
+import { fetchBooks, BookDeleted } from '../Redux/books/books';
 
 function Book() {
 	const showBook = useSelector((state) => state.books);
@@ -16,26 +15,29 @@ function Book() {
 	};
 
 	return (
-		<li className='bookList'>
-			<div className='bookContainer'>
-				<span>
-					{showBook.map((book) => (
-						<div key={book.id} className='eachbook'>
-							{book.title} :{book.author}
-							<button
-								type='button'
-								className='delete'
-								onClick={() => {
+  <li className="bookList">
+    <div className="bookContainer">
+      <span>
+        {showBook.map((book) => (
+          <div key={book.id} className="eachbook">
+            {book.title}
+            {' '}
+            :
+            {book.author}
+            <button
+              type="button"
+              className="delete"
+              onClick={() => {
 									deleteHandler(book.id);
 								}}
-							>
-								Delete
-							</button>
-						</div>
+            >
+              Delete
+            </button>
+          </div>
 					))}
-				</span>
-			</div>
-		</li>
+      </span>
+    </div>
+  </li>
 	);
 }
 

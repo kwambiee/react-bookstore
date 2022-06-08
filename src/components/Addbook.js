@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { postBook } from '../Redux/books/books';
 import uuid from 'react-uuid';
+import { postBook } from '../Redux/books/books';
 
 const Addbook = () => {
 	const initialBookState = {
@@ -25,30 +25,30 @@ const Addbook = () => {
 		setBookState(initialBookState);
 	};
 	return (
-		<div className='formContainer'>
-			<span className='addBook'>ADD NEW BOOK</span>
-			<form className='form'>
-				<input
-					className='formTitle'
-					type='text'
-					name='title'
-					value={bookState.title}
-					placeholder='Book Title'
-					onChange={handleOnChange}
-				/>
-				<input
-					className='formAuthor'
-					type='text'
-					name='author'
-					value={bookState.author}
-					placeholder='Author'
-					onChange={handleOnChange}
-				/>
-				<button type='button' className='input-submit' onClick={handleSubmit}>
-					Add book
-				</button>
-			</form>
-		</div>
+  <div className="formContainer">
+    <span className="addBook">ADD NEW BOOK</span>
+    <form className="form">
+      <input
+        className="formTitle"
+        type="text"
+        name="title"
+        value={bookState.title}
+        placeholder="Book Title"
+        onChange={handleOnChange}
+      />
+      <input
+        className="formAuthor"
+        type="text"
+        name="author"
+        value={bookState.author}
+        placeholder="Author"
+        onChange={handleOnChange}
+      />
+      <button type="button" className="input-submit" onClick={handleSubmit}>
+        Add book
+      </button>
+    </form>
+  </div>
 	);
 };
 
