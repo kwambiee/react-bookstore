@@ -25,41 +25,41 @@ const Addbook = () => {
 		setBookState(initialBookState);
 	};
 	return (
-		<div className='formContainer'>
-			<span className='addBook'>ADD NEW BOOK</span>
-			<form className='form'>
-				<input
-					className='formTitle'
-					type='text'
-					name='title'
-					value={bookState.title}
-					placeholder='Book Title'
-					onChange={handleOnChange}
-				/>
-				<input
-					className='formAuthor'
-					type='text'
-					name='author'
-					value={bookState.author}
-					placeholder='Author'
-					onChange={handleOnChange}
-				/>
-				<select
-					name='category'
-					className='formAuthor'
-					onChange={handleOnChange}
-				>
-					<option value=''>Category</option>
-					<option value='Fiction'>Fiction</option>
-					<option value='Horror'>Suspense</option>
-					<option value='Religious'>Religious</option>
-					<option value='Romance'>Romance</option>
-				</select>
-				<button type='button' className='input-submit' onClick={handleSubmit}>
-					Add book
-				</button>
-			</form>
-		</div>
+  <div className="formContainer">
+    <span className="addBook">ADD NEW BOOK</span>
+    <form className="form">
+      <input
+        className="formTitle"
+        type="text"
+        name="title"
+        value={bookState.title}
+        placeholder="Book Title"
+        onChange={handleOnChange}
+      />
+      <input
+        className="formAuthor"
+        type="text"
+        name="author"
+        value={bookState.author}
+        placeholder="Author"
+        onChange={handleOnChange}
+      />
+      <select
+        name="category"
+        className="formAuthor"
+        onChange={handleOnChange}
+      >
+        <option value="">Category</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Horror">Suspense</option>
+        <option value="Religious">Religious</option>
+        <option value="Romance">Romance</option>
+      </select>
+      <button type="button" className="input-submit" onClick={handleSubmit}>
+        Add book
+      </button>
+    </form>
+  </div>
 	);
 };
 

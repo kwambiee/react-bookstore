@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchBooks, BookDeleted } from '../Redux/books/books';
 import { CircularProgressBar } from '@tomik23/react-circular-progress-bar';
+import { fetchBooks, BookDeleted } from '../Redux/books/books';
 
-// const value = Math.floor(Math.random() * 100 + 1);
 const props = {
 	id: 0,
 	percent: Math.floor(Math.random() * 100 + 1), // is require
@@ -41,54 +40,55 @@ function Book() {
 	};
 
 	return (
-		<li className='bookList'>
-			<div className='bookContainer'>
-				<div>
-					{showBook.map((book) => (
-						<div key={book.id} className='bookcard'>
-							<div>
-								<h3 className='bookCategory'>{book.category}</h3>
-								<h1 className='bookTitle'>{book.title}</h1>
-								<h2 className='bookAuthor'>{book.author}</h2>
-								<div className='actions'>
-									<span className='bookActions'>Comments</span>
-									<span className='rightBorder'></span>
-									<span>
-										<button
-											type='button'
-											className='delete'
-											onClick={() => {
+  <li className="bookList">
+    <div className="bookContainer">
+      <div>
+        {showBook.map((book) => (
+          <div key={book.id} className="bookcard">
+            <div>
+              <h3 className="bookCategory">{book.category}</h3>
+              <h1 className="bookTitle">{book.title}</h1>
+              <h2 className="bookAuthor">{book.author}</h2>
+              <div className="actions">
+                <span className="bookActions">Comments</span>
+                <span className="rightBorder" />
+                <span>
+                  <button
+                    type="button"
+                    className="delete"
+                    onClick={() => {
 												deleteHandler(book.id);
 											}}
-										>
-											Remove
-										</button>
-									</span>
-									<span className='rightBorder'></span>
-									<span className='bookActions edit'>Edit</span>
-								</div>
-							</div>
-							<div>
-								<span className='progress'>
-									<CircularProgressBar {...props} />
-									<span className='progReport'>
-										<p className='propPercent'>{props.percent}%</p>
-										<p className='rate'>completed</p>
-									</span>
-								</span>
-							</div>
-							<div className='chapter'>
-								<h2>CURRENT CHAPTER</h2>
-								<h3>CHAPTER 17</h3>
-								<button type='button' className='progButton'>
-									UPDATE PROGRESS
-								</button>
-							</div>
-						</div>
+                  >
+  Remove
+                  </button>
+                </span>
+                <span className="rightBorder" />
+                <span className="bookActions edit">Edit</span>
+              </div>
+            </div>
+            <div>
+              <span className="progress">
+                <CircularProgressBar {...props} />
+                <span className="progReport">
+                  <p className="propPercent">{`${props.percent}%`}</p>
+                  <p className="rate">completed</p>
+                </span>
+              </span>
+            </div>
+            <span className="divider" />
+            <div className="chapter">
+              <h2>CURRENT CHAPTER</h2>
+              <h3>CHAPTER 17</h3>
+              <button type="button" className="progButton">
+                UPDATE PROGRESS
+              </button>
+            </div>
+          </div>
 					))}
-				</div>
-			</div>
-		</li>
+      </div>
+    </div>
+  </li>
 	);
 }
 
