@@ -15,11 +15,9 @@
 - JavaScript (ES6)
 - CSS
 
-## Live Demo(Not available yet)
+## Live Demo
 
 [See Page](https://malkia.netlify.app/)
-
-[Live Link]
 
 ## Getting Started
 

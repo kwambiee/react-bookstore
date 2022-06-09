@@ -142,9 +142,7 @@ video {
 }
 
 .formTitle {
-  padding-right: 15rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 7rem 0.5rem 0;
   margin-right: 0.1rem;
   border-radius: 2px;
   border: 2px solid silver;
@@ -278,11 +276,9 @@ video {
 }
 
 .progButton {
-  padding-top: 0.5rem;
+  padding: 0.5rem 2rem;
   padding-bottom: 0.5rem;
   margin-top: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   color: #fff;
   background-color: rgb(29, 124, 231);
   border: none;
