@@ -1,6 +1,32 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBooks, BookDeleted } from '../Redux/books/books';
+import { CircularProgressBar } from '@tomik23/react-circular-progress-bar';
+
+// const value = Math.floor(Math.random() * 100 + 1);
+const props = {
+	id: 0,
+	percent: Math.floor(Math.random() * 100 + 1), // is require
+	colorSlice: '#00a1ff',
+	colorCircle: '#00a1ff',
+	fontColor: '#365b74',
+	fontSize: '1.6rem',
+	fontWeight: 400,
+	size: 100,
+	stroke: 10,
+	strokeBottom: 5,
+	speed: 60,
+	cut: 0,
+	rotation: -90,
+	opacity: 10,
+	unit: '%',
+	textPosition: '0.35em',
+	animationOff: false,
+	inverse: false,
+	round: false,
+	number: true,
+	linearGradient: ['#ffff00', 'brown'],
+};
 
 function Book() {
 	const showBook = useSelector((state) => state.books);
@@ -43,14 +69,20 @@ function Book() {
 								</div>
 							</div>
 							<div>
-								<span></span>
-								<span>64%</span>
-								<p>completed</p>
+								<span className='progress'>
+									<CircularProgressBar {...props} />
+									<span className='progReport'>
+										<p className='propPercent'>{props.percent}%</p>
+										<p className='rate'>completed</p>
+									</span>
+								</span>
 							</div>
-							<div>
+							<div className='chapter'>
 								<h2>CURRENT CHAPTER</h2>
-								<h2>CHAPTER 17</h2>
-								<button type='button'>UPDATE PROGRESS</button>
+								<h3>CHAPTER 17</h3>
+								<button type='button' className='progButton'>
+									UPDATE PROGRESS
+								</button>
 							</div>
 						</div>
 					))}

@@ -91,6 +91,8 @@ video {
 
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 
@@ -178,6 +180,7 @@ justify-content: space-between;
   margin: 6.25rem;
   background-color: #fff;
   padding: 2rem;
+  flex: 1;
 
 }
 .bookCategory{
@@ -225,6 +228,42 @@ justify-content: space-between;
 }
 .edit{
   margin-left: 0.5rem;
+}
+.progress {
+  display: flex;
+}
+.progReport {
+  padding-top: 1.5rem;
+  padding-left: 0.5rem;
+}
+.propPercent{
+  font-size: 2rem;
+  font-weight: 400;
+}
+.rate{
+  font-size: 0.875rem;
+  color: #888888;
+}
+.chapter h2{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #888888;
+
+}
+.chapter h3 {
+font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+.progButton{
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+margin-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #fff;
+  background-color: rgb(29, 124, 231);
+  border: none;
+  border-radius: 5px;
 }
 
 
