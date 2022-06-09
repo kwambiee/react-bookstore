@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;900&display=swap');
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Courier New', Courier, monospace;
-}
+
 
 .navLinks {
   display: flex;
@@ -29,20 +29,6 @@ body {
   list-style: none;
 }
 
-.bookContainer {
-  margin: 1rem auto;
-  border: 1px solid black;
-  padding: 2rem;
-  width: 80%;
-}
-
-.bookContainer span {
-  margin: 0.8rem;
-}
-
-.delete {
-  float: right;
-}
 
 .formContainer {
   margin-left: 8%;
@@ -91,9 +77,20 @@ body {
   padding: 0.8rem;
   margin: 1rem auto;
 }
-
 .eachbook {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  border: 1px solid #e8e8e8;
+  margin: 6.25rem;
+
 }
+.bookCategory{
+  font-size: 0.875rem;
+  color: #121212;
+  font-family: 'Montserrat', sans-serif;
+}
+.bookTitle {
+  font-family: 'Roboto Slab', serif;
+}
+
+
