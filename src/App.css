@@ -120,11 +120,8 @@ video {
 
 
 .formContainer {
-  margin-left: 8%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 6.25rem;
+
 }
 
 .addBook {
@@ -132,8 +129,13 @@ video {
   font-weight: bolder;
 }
 
+.form{
+display: flex;
+justify-content: space-between;
+}
+
 .formTitle {
-  padding-right: 22%;
+  padding-right: 25rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-right: 0.5rem;
@@ -143,6 +145,7 @@ video {
 
 .formAuthor {
   padding-top: 0.5rem;
+  padding-right: 4rem;
   padding-bottom: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 2px;
@@ -150,7 +153,9 @@ video {
 }
 
 .input-submit {
-  padding: 0.5rem 1.5rem;
+  padding-top: 0.2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   color: #fff;
   background-color: rgb(29, 124, 231);
   border: none;
