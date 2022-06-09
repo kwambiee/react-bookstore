@@ -92,24 +92,29 @@ video {
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
 }
-
 
 
 .navLinks {
   display: flex;
+  align-items: baseline;
+}
+.logo{
+  font-weight: bold;
+  font-size: 1.875rem;
 }
 
 .navLinks li {
   list-style: none;
   margin: 0.5rem 1rem;
+  color:#0290ff;
 }
 
 .navLink {
   text-decoration: none;
-  font-weight: bolder;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 0.813rem;
+  color:#888888;
 }
 
 .navLink:hover {
@@ -137,27 +142,25 @@ justify-content: space-between;
 }
 
 .formTitle {
-  padding-right: 25rem;
+  padding-right: 7rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  margin-right: 0.5rem;
+  margin-right: 0.2rem;
   border-radius: 2px;
   border: 2px solid silver;
 }
 
 .formAuthor {
   padding-top: 0.5rem;
-  padding-right: 4rem;
+  padding-right: 2rem;
   padding-bottom: 0.5rem;
-  margin-right: 0.5rem;
+  margin-right: 0.2rem;
   border-radius: 2px;
   border: 2px solid silver;
 }
 
 .input-submit {
   padding-top: 0.2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   color: #fff;
   background-color: rgb(29, 124, 231);
   border: none;
@@ -238,7 +241,8 @@ justify-content: space-between;
 }
 .propPercent{
   font-size: 2rem;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 .rate{
   font-size: 0.875rem;
@@ -264,6 +268,36 @@ margin-top: 1rem;
   background-color: rgb(29, 124, 231);
   border: none;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 660px) {
+  .bookcard {
+    display: block;
+    padding-right: 1rem;
+  }
+  .actions{
+    margin-bottom: 1rem;
+  }
+  .progress{
+    margin-bottom: 1rem;
+  }
+  .form{
+    display: block;
+    width: 300px;
+  }
+  .formTitle {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  .formAuthor{
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .input-submit{
+    padding: 1rem 2rem;
+
+  }
+
 }
 
 

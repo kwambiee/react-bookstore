@@ -7,10 +7,10 @@ import './App.css';
 function App() {
 	return (
 		<Router>
-			<div>
+			<div className='appContainer'>
 				<nav>
 					<ul className='navLinks'>
-						<li>Bookstore CMS</li>
+						<li className='logo'>Bookstore CMS</li>
 						<li>
 							<Link to='/' className='navLink'>
 								BOOKS
