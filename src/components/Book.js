@@ -19,13 +19,14 @@ function Book() {
 			<div className='bookContainer'>
 				<div>
 					{showBook.map((book) => (
-						<div key={book.id} className='eachbook'>
+						<div key={book.id} className='bookcard'>
 							<div>
 								<h3 className='bookCategory'>{book.category}</h3>
 								<h1 className='bookTitle'>{book.title}</h1>
-								<h2>{book.author}</h2>
-								<div>
-									<span>Comments</span>
+								<h2 className='bookAuthor'>{book.author}</h2>
+								<div className='actions'>
+									<span className='bookActions'>Comments</span>
+									<span className='rightBorder'></span>
 									<span>
 										<button
 											type='button'
@@ -34,15 +35,17 @@ function Book() {
 												deleteHandler(book.id);
 											}}
 										>
-											Delete
+											Remove
 										</button>
 									</span>
-									<span>Edit</span>
+									<span className='rightBorder'></span>
+									<span className='bookActions edit'>Edit</span>
 								</div>
 							</div>
 							<div>
 								<span></span>
 								<span>64%</span>
+								<p>completed</p>
 							</div>
 							<div>
 								<h2>CURRENT CHAPTER</h2>
