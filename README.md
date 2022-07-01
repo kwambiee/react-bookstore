@@ -17,7 +17,7 @@
 
 ## ScreenShots
 
-[](/public/assets/screenshot.png)
+[screenshot](/public/assets/screenshot.png)
 
 ## Live Demo
 
