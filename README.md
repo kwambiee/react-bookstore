@@ -15,9 +15,13 @@
 - JavaScript (ES6)
 - CSS
 
+## ScreenShots
+
+[](/public/assets/screenshot.png)
+
 ## Live Demo
 
-[See Page](https://malkia.netlify.app/)
+[See Page](https://malkia-bookstore.netlify.app/)
 
 ## Getting Started
 
